@@ -1,0 +1,54 @@
+<!-- views/index.ejs -->
+<!doctype html>
+<html>
+<head>
+	<title>Social Platform</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+	<style>
+		body 		{ padding-top:80px; }
+	</style>
+</head>
+<body>
+
+<div class="container">
+
+	<div class="jumbotron text-center">
+		<h1><span class="fa fa-unlock-alt"></span> Social Platform
+		<div class="btn-group btn-group-justified">
+		 <a href="/logout" class="btn btn-default">Logout</a>
+		</div></h1>
+		<div class="row">
+	    <a href="/showmeMyPosts" class="list-group-item">Show Your Posts</a>
+	    </div><br>
+		<form class="form"  method="POST" action="/addPost">
+			<div class="form-group row">
+		      	<label for="smFormGroupInput" class="col-sm-2 col-form-label col-form-label-sm">Write Post</label>
+		      		<div class="col-sm-10">
+		        		
+		        		<textarea class="form-control" rows="5" required name="post" placeholder="Write Post....."></textarea>
+		      		</div>
+		    </div>
+		    
+		    
+		    <button type="submit" class="btn btn-primary">Publish</button>
+		</form>
+	
+		
+	</div>
+	<% if(errors){ %>
+		<div class="alert alert-danger" role="alert">
+			<% if(errors){ %>
+				<ul>
+				<% errors.forEach(function(error){ %>
+					<li><%= error.msg %></li>
+				<% }) %>
+				</ul>
+			<% } %>
+			</div>
+			
+			<% } %>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "name": "small-social-platform",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ebraheem1/Backend-Coding-Challenge.git"
+  },
+  "author": "Ebraheem",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ebraheem1/Backend-Coding-Challenge/issues"
+  },
+  "homepage": "https://github.com/Ebraheem1/Backend-Coding-Challenge#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "connect-flash": "^0.1.1",
+    "ejs": "^2.5.6",
+    "express": "^4.15.3",
+    "express-session": "^1.15.3",
+    "express-validator": "^3.2.0",
+    "mongoose": "^4.10.8",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.1.1"
+  }
+}
