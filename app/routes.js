@@ -21,7 +21,8 @@ router.get('/showmeMyPosts',ensureAuthenticated,function(req,res)
 router.get('/remove/:index',ensureAuthenticated,function(req,res)
 {
 	var index = req.params.index;
-	if(req.user.posts.length > 0)
+	if(req.user.posts.length > 0 && index < req.user.posts.length
+		&& index >= 0)
 	{
 		req.user.posts.splice(index,1);
 		req.user.save();
